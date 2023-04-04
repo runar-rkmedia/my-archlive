@@ -1,6 +1,6 @@
 set -x
-source .env
-rmmod pcspkr
+source ./.env
+rmmod pcspkr >/dev/null 2>&1
 rfkill unblock wifi
 systemctl restart iwd.service
 # If you have my livecd, I probably trust you enough to give you my wifi-password
