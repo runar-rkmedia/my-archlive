@@ -46,3 +46,14 @@ When making modifications, please ensure that this is scriptable. Assume that th
 ## Structure
 
 - `./root_files`: Any files here will be but into the root-users home-folder
+
+## Passwords, secrets
+
+Put them into ./root_files/.env
+
+Current variables:
+
+```
+WIFI_NAME="my-wifi"
+WIFI_PASSWORD="my-password"
+```
