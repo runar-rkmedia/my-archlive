@@ -1,11 +1,12 @@
+.PHONY: clean default clean copyRootFiles setFilePermissions buildToRam copyToMyDisk
 default: archlive copyRootFiles setFilePermissions
 	echo Done
 clean:
 	rm -r archlive out
 archlive:
 	cp -r /usr/share/archiso/configs/releng/ archlive
-copyRootFiles:
-	cp -r ./root_files/* ./archlive/airootfs/root/
+copyRootFiles: 
+	cp -r ./root_files/. ./archlive/airootfs/root/
 setFilePermissions:
 	sed -i '/file_permissions/a\  ["/root/init.sh"]="0:0:755"' archlive/profiledef.sh
 buildToRam: default

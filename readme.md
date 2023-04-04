@@ -54,6 +54,6 @@ Put them into ./root_files/.env
 Current variables:
 
 ```
-WIFI_NAME="my-wifi"
-WIFI_PASSWORD="my-password"
+export WIFI_NAME="my-wifi"
+export WIFI_PASSWORD="my-password"
 ```
