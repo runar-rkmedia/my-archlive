@@ -6,8 +6,8 @@ systemctl restart iwd.service
 # If you have my livecd, I probably trust you enough to give you my wifi-password
 iwctl station wlan0 scan
 iwctl station wlan0 get-networks
-if [[ -z "${WIFI_NAME}" ]]; then
-    if [[ -z "${WIFI_PASSWORD}" ]]; then
+if [[ -n "${WIFI_NAME}" ]]; then
+    if [[ -n "${WIFI_PASSWORD}" ]]; then
         iwctl station wlan0 connect ${WIFI_NAME} -P ${WIFI_PASSWORD}
     else
         iwctl station wlan0 connect ${WIFI_NAME}
